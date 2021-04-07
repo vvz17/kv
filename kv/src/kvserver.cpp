@@ -545,7 +545,7 @@ int main(int argc, char* argv[]) {
 		bip::scoped_lock<mutex_type> lock(mutex);
 
 		boost::asio::io_service io_service;
-		server<decltype(kv)> s(kv, io_service, std::atoi(argv[1]), 6);
+		server<decltype(kv)> s(kv, io_service, std::atoi(argv[1]), 60);
 
 		s.run();
 	}
